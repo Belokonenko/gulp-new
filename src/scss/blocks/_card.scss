@@ -1,0 +1,112 @@
+.card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    padding: 50px;
+    border: var(--border);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease-in-out;
+    min-height: 310px;
+
+
+    &:hover {
+        scale: 1.05;
+    }
+
+    &:active {
+        scale: 1;
+    }
+
+    &--dark {
+        background-color: var(--color-dark);
+    }
+    
+    &--accent {
+
+        background-color: var(--color-accent);
+    }
+    
+    &--light {
+
+        background-color: var(--color-light);
+    }
+    
+    @include mobile {
+        gap: 27px;
+    }
+
+    &__title {
+        display: inline-flex;
+        align-items: start;
+        flex-direction: column;
+        grid-column: 1/2;
+        grid-row: 1/2;
+
+        @include mobile {
+            grid-column: 1/-1;
+        }
+    }
+    
+    &__text {
+        padding: 7px;
+        background-color: #fff;
+    }
+
+    &__link-wrap:focus-visible {
+        outline: none;
+    }
+
+    &__link-wrap:focus-visible::before {
+        outline: 5px solid var(--color-accent);
+        outline-offset: 5px;
+        border-radius: var(--border-radius-large);
+    }
+
+    &__link-wrap {
+        display: flex;
+        gap: 15px;
+        align-items: flex-end;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        align-self: flex-end;
+    }
+
+    &__link-wrap::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+    }
+
+    &__icon-wrap {
+        @include square(41px);
+
+        border-radius: 50%;
+        background-color: var(--color-dark);
+
+        @include flex-center;
+    }
+
+    &__icon {
+        fill: var(--color-accent);
+    }
+
+    &__img {
+        grid-column: 2/-1;
+        grid-row: 1/-1;
+        width: 210px;
+        height: auto;
+        align-self: center;
+        justify-self: end;
+        flex-shrink: 0;
+
+        @include mobile {
+            grid-column: 2/-1;
+            grid-row: 2/-1;
+        }
+    }
+}

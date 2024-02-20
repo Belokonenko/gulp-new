@@ -1,0 +1,15 @@
+.marker {
+    padding: 7px;
+    line-height: 0.7;
+    border-radius: var(--border-radius-small);
+
+    @include flex-center(true);
+    
+    &_them_accent {
+        background-color: var(--color-accent);
+    }
+
+    &_them_light {
+        background-color: var(--color-light);
+    }
+}

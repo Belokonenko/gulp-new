@@ -1,0 +1,19 @@
+.services {
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 100px;
+
+    
+
+        @include desktop {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @include mobile {
+            gap: 30px;
+            margin-bottom: 100px;
+        }
+    }
+}

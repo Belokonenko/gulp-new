@@ -1,0 +1,35 @@
+.free {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 347px;
+    background-color: var(--color-gray);
+    border-radius: var(--border-radius-large);
+    padding: 60px;
+
+    @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__block-txt {
+        display: grid;
+        gap: 26px;
+        @include mobile {
+        }
+    }
+
+    &__button {
+        justify-self: start;
+    }
+
+    &__block-img {
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        translate: 0 -50%;
+
+        @include desktop {
+            right: 5%;
+        }
+    }
+}

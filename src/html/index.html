@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Positivus</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+            <symbol id="arrow" viewBox="0 0 21 20">
+                <path
+                    d="M1.25 13.701C0.532561 14.1152 0.286748 15.0326 0.700962 15.75C1.11518 16.4674 2.03256 16.7133 2.75 16.299L1.25 13.701ZM20.7694 5.38823C20.9838 4.58803 20.5089 3.76552 19.7087 3.55111L6.66874 0.0570541C5.86854 -0.157359 5.04603 0.317515 4.83162 1.11771C4.61721 1.91791 5.09208 2.74042 5.89228 2.95483L17.4834 6.06066L14.3776 17.6518C14.1631 18.452 14.638 19.2745 15.4382 19.4889C16.2384 19.7033 17.0609 19.2284 17.2753 18.4282L20.7694 5.38823ZM2.75 16.299L20.0705 6.29904L18.5705 3.70096L1.25 13.701L2.75 16.299Z"
+                />
+            </symbol>
+        </svg>
+
+        <header class="header">
+            <div class="header__inner container">
+                <div class="header__logo logo">
+                    <img
+                        class="header__logo"
+                        src="./img/Logo.svg"
+                        width="220"
+                        height="56"
+                        alt="logo"
+                        aria-hidden="true"
+                    />
+                </div>
+                <nav class="header__menu nav hidden-mobile">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="#" class="header__link">About us</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Services</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Use Cases</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Pricing</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="#" class="header__link">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button
+                    class="header__button button hidden-mobile"
+                    type="button"
+                >
+                    Request a quote
+                </button>
+
+                <button
+                    class="burger__button button__burger-menu visible-mobile"
+                    type="button"
+                    title="Open navigating menu"
+                    onclick="mobileOverlay.showModal()"
+                >
+                    <span class="visually-hidden">Open navigating menu</span>
+                </button>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="section section--hidden-x container">
+                <div class="section__body">
+                    <div class="hero">
+                        <div class="hero__main">
+                            <div class="hero__body">
+                                <h1 class="hero__title">
+                                    Navigating the digital landscape for success
+                                </h1>
+                                <div class="hero__description">
+                                    <p>
+                                        Our digital marketing agency helps
+                                        businesses grow and succeed online
+                                        through a range of services including
+                                        SEO, PPC, social media marketing, and
+                                        content creation.
+                                    </p>
+                                </div>
+                                <button class="hero__button button">
+                                    Book a consultation
+                                </button>
+                            </div>
+                            <img
+                                class="hero__img"
+                                src="./img/Banner.svg"
+                                alt=""
+                                width="600"
+                                height="515"
+                            />
+                        </div>
+
+                        <div class="hero__partners">
+                            <h2 class="visually-hidden">our partners</h2>
+                            <ul class="hero__partners-list">
+                                <li class="hero__partners-item">
+                                    <img
+                                        class="hero__partners-img"
+                                        src="./img/Amazon.svg"
+                                        alt="logo Amazon"
+                                        width="130"
+                                        height="48"
+                                    />
+                                </li>
+                                <li class="hero__partners-item">
+                                    <img
+                                        class="hero__partners-img"
+                                        src="./img/Drebbble.svg"
+                                        alt="logo Bribbble"
+                                        width="130"
+                                        height="48"
+                                    />
+                                </li>
+                                <li class="hero__partners-item">
+                                    <img
+                                        class="hero__partners-img"
+                                        src="./img/Hoob.svg"
+                                        alt="logo Hubspot"
+                                        width="130"
+                                        height="48"
+                                    />
+                                </li>
+                                <li class="hero__partners-item">
+                                    <img
+                                        class="hero__partners-img"
+                                        src="./img/Notion.svg"
+                                        alt="logo Notion"
+                                        width="130"
+                                        height="48"
+                                    />
+                                </li>
+                                <li class="hero__partners-item">
+                                    <img
+                                        class="hero__partners-img"
+                                        src="./img/Netflix.svg"
+                                        alt="logo Netflix"
+                                        width="130"
+                                        height="48"
+                                    />
+                                </li>
+                                <li class="hero__partners-item">
+                                    <img
+                                        class="hero__partners-img"
+                                        src="./img/Zoom.svg"
+                                        alt="logo Zoom"
+                                        width="130"
+                                        height="48"
+                                    />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section services container">
+                <div class="services__title-wrap heading">
+                    <h2 class="heading__title marker marker_them_accent">
+                        Services
+                    </h2>
+                    <p class="services__description heading__description">
+                        At our digital marketing agency, we offer a range of
+                        services to help businesses grow and succeed online.
+                        These services include:
+                    </p>
+                </div>
+                <ul class="services__cards">
+                    <li>
+                        <article class="card card--light">
+                            <h3 class="card__title">
+                                <span
+                                    class="card__text marker marker_them_accent"
+                                    >Search</span
+                                >
+                                <span
+                                    class="card__text marker marker_them_accent"
+                                    >engine optimization</span
+                                >
+                            </h3>
+
+                            <a class="card__link-wrap" href="#">
+                                <div class="card__icon-wrap">
+                                    <svg
+                                        class="card__icon"
+                                        width="21"
+                                        height="20"
+                                    >
+                                        <use xlink:href="#arrow"></use>
+                                    </svg>
+                                </div>
+                                <span class="card__link-txt hidden-mobile"
+                                    >Learn more</span
+                                >
+                            </a>
+                            <img
+                                class="card__img"
+                                src="../img/card-1.svg"
+                                alt=""
+                                aria-hidden="true"
+                                width="210"
+                                height="200"
+                            />
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card card--accent">
+                            <h3 class="card__title">
+                                <span
+                                    class="card__text marker marker_them_light"
+                                    >Pay-per-click
+                                </span>
+                                <span
+                                    class="card__text marker marker_them_light"
+                                    >advertising
+                                </span>
+                            </h3>
+
+                            <a class="card__link-wrap" href="#">
+                                <div class="card__icon-wrap">
+                                    <svg
+                                        class="card__icon"
+                                        width="21"
+                                        height="20"
+                                    >
+                                        <use xlink:href="#arrow"></use>
+                                    </svg>
+                                </div>
+                                <span class="card__link-txt hidden-mobile"
+                                    >Learn more</span
+                                >
+                            </a>
+                            <img
+                                class="card__img"
+                                src="../img/card-2.svg"
+                                alt=""
+                                aria-hidden="true"
+                                width="210"
+                                height="200"
+                            />
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card card--dark">
+                            <h3 class="card__title">
+                                <span
+                                    class="card__text marker marker_them_light"
+                                    >Social Media</span
+                                >
+                                <span
+                                    class="card__text marker marker_them_light"
+                                    >Marketing</span
+                                >
+                            </h3>
+
+                            <a class="card__link-wrap" href="#">
+                                <div class="card__icon-wrap">
+                                    <svg
+                                        class="card__icon"
+                                        width="21"
+                                        height="20"
+                                    >
+                                        <use xlink:href="#arrow"></use>
+                                    </svg>
+                                </div>
+                                <span class="card__link-txt hidden-mobile"
+                                    >Learn more</span
+                                >
+                            </a>
+                            <img
+                                class="card__img"
+                                src="../img/card-3.svg"
+                                alt=""
+                                aria-hidden="true"
+                                width="210"
+                                height="200"
+                            />
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card card--light">
+                            <h3 class="card__title">
+                                <span
+                                    class="card__text marker marker_them_accent"
+                                    >Email</span
+                                >
+                                <span
+                                    class="card__text marker marker_them_accent"
+                                    >Marketing</span
+                                >
+                            </h3>
+
+                            <a class="card__link-wrap" href="#">
+                                <div class="card__icon-wrap">
+                                    <svg
+                                        class="card__icon"
+                                        width="21"
+                                        height="20"
+                                    >
+                                        <use xlink:href="#arrow"></use>
+                                    </svg>
+                                </div>
+                                <span class="card__link-txt hidden-mobile"
+                                    >Learn more</span
+                                >
+                            </a>
+                            <img
+                                class="card__img"
+                                src="../img/card-4.svg"
+                                alt=""
+                                aria-hidden="true"
+                                width="210"
+                                height="200"
+                            />
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card card--accent">
+                            <h3 class="card__title">
+                                <span
+                                    class="card__text marker marker_them_light"
+                                    >Content</span
+                                >
+                                <span
+                                    class="card__text marker marker_them_light"
+                                    >Creation</span
+                                >
+                            </h3>
+
+                            <a class="card__link-wrap" href="#">
+                                <div class="card__icon-wrap">
+                                    <svg
+                                        class="card__icon"
+                                        width="21"
+                                        height="20"
+                                    >
+                                        <use xlink:href="#arrow"></use>
+                                    </svg>
+                                </div>
+                                <span class="card__link-txt hidden-mobile"
+                                    >Learn more</span
+                                >
+                            </a>
+                            <img
+                                class="card__img"
+                                src="../img/card-5.svg"
+                                alt=""
+                                aria-hidden="true"
+                                width="210"
+                                height="200"
+                            />
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card card--dark">
+                            <h3 class="card__title">
+                                <span
+                                    class="card__text marker marker_them_light"
+                                    >Analytics and
+                                </span>
+                                <span
+                                    class="card__text marker marker_them_light"
+                                    >Tracking</span
+                                >
+                            </h3>
+
+                            <a class="card__link-wrap" href="#">
+                                <div class="card__icon-wrap">
+                                    <svg
+                                        class="card__icon"
+                                        width="21"
+                                        height="20"
+                                    >
+                                        <use xlink:href="#arrow"></use>
+                                    </svg>
+                                </div>
+                                <span class="card__link-txt hidden-mobile"
+                                    >Learn more</span
+                                >
+                            </a>
+                            <img
+                                class="card__img"
+                                src="../img/card-6.svg"
+                                alt=""
+                                aria-hidden="true"
+                                width="210"
+                                height="200"
+                            />
+                        </article>
+                    </li>
+                </ul>
+
+                <article class="free">
+                    <div class="free__block-txt">
+                        <h3 class="free__title">Let’s make things happen</h3>
+                        <p class="free__description">
+                            Contact us today to learn more about how our digital
+                            marketing services can help your business grow and
+                            succeed online.
+                        </p>
+                        <button class="button free__button" type="button">
+                            Get your free proposal
+                        </button>
+                    </div>
+                    <img
+                        class="free__block-img hidden-mobile"
+                        src="./img/Free-banner.svg"
+                        alt=""
+                        aria-hidden="true"
+                        width="359"
+                        height="394"
+                    />
+                </article>
+            </section>
+
+            <section class="studies container">
+                <div class="heading studies__block-title">
+                    <h2 class="heading__title marker marker_them_accent">
+                        Case Studies
+                    </h2>
+                    <p class="studies__description">
+                        Explore Real-Life Examples of Our Proven Digital
+                        Marketing Success through Our Case Studies
+                    </p>
+                </div>
+
+                <div class="studies__block-articles">
+                    <ul class="studies__list">
+                        <li class="studies__item">
+                            <article>
+                                <p>
+                                    For a local restaurant, we implemented a
+                                    targeted PPC campaign that resulted in a 50%
+                                    increase in website traffic and a 25%
+                                    increase in sales.
+                                </p>
+                                <a href="#" class="studies__link">
+                                    <span>Learn more</span>
+
+                                    <svg
+                                        class="studies__icon"
+                                        width="21"
+                                        height="20"
+                                    >
+                                        <use xlink:href="#arrow"></use>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="studies__item">
+                            <article>
+                                <p>
+                                    For a B2B software company, we developed an
+                                    SEO strategy that resulted in a first page
+                                    ranking for key keywords and a 200% increase
+                                    in organic traffic.
+                                </p>
+                                <a href="#" class="studies__link">
+                                    <span>Learn more</span>
+
+                                    <svg
+                                        class="studies__icon"
+                                        width="21"
+                                        height="20"
+                                    >
+                                        <use xlink:href="#arrow"></use>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="studies__item">
+                            <article>
+                                <p>
+                                    For a national retail chain, we created a
+                                    social media marketing campaign that
+                                    increased followers by 25% and generated a
+                                    20% increase in online sales.
+                                </p>
+                                <a href="#" class="studies__link">
+                                    <span>Learn more</span>
+
+                                    <svg
+                                        class="studies__icon"
+                                        width="21"
+                                        height="20"
+                                    >
+                                        <use xlink:href="#arrow"></use>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <script src="js/index.bundle.js"></script>
+    </body>
+</html>
